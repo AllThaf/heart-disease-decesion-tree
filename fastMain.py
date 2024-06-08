@@ -1,12 +1,13 @@
-from User import User as user
+from user import User as user
 from menu import Interface as menu
+from menu import TampilTree as tampilkan
 from package.datasets import load_heart_disease
 from package.model_selection import train_test_split
 from package.tree import DecisionTreeClassifier
 from Fastpackage.tree import DecisionTreeClassifierFast
-from package.metrics import accuracy_score
+from Fastpackage.metrics import accuracy_score
 
-# from Fastpackage.metrics import accuracy_score
+
 import msvcrt
 import os
 import time
@@ -73,6 +74,25 @@ while True:
         menu.about()
 
     elif pilihan == 4:
+        os.system("cls")
+        while True:
+            try:
+                maxdepth = int(input("Masukkan kedalaman maksimal: "))
+                if maxdepth > 0 and maxdepth <= 10:
+                    break
+                else:
+                    print("Kedalaman harus lebih dari 0 atau tidak lebih dari 10")
+                    time.sleep(3)
+            except:
+                print("Masukkan angka yang benar")
+                time.sleep(3)
+                os.system("cls")
+        tampilkan().tampil(clf.node, maxdepth)
+        tampilkan().traversal(clf.node, maxdepth)
+        print("\nPress any key to continue...")
+        msvcrt.getch()
+
+    elif pilihan == 5:
         exit()
     else:
         print("Pilihan tidak tersedia")

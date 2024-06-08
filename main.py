@@ -1,4 +1,4 @@
-from User import User as user
+from user import User as user
 from menu import Interface as menu
 from package.datasets import load_heart_disease
 from package.model_selection import train_test_split
