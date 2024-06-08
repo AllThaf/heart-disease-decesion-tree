@@ -46,8 +46,8 @@ class Interface:
         print("+-------------------------+")
         print("| 1. Predict              |")
         print("| 2. Tes Akurasi          |")
-        print("| 3. About                |")
-        print("| 4. Lihat tree           |")
+        print("| 3. Lihat tree           |")
+        print("| 4. About                |")
         print("| 5. Exit                 |")
         print("+-------------------------+")
 

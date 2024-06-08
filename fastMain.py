@@ -71,9 +71,6 @@ while True:
         msvcrt.getch()
 
     elif pilihan == 3:
-        menu.about()
-
-    elif pilihan == 4:
         os.system("cls")
         while True:
             try:
@@ -91,6 +88,9 @@ while True:
         tampilkan().traversal(clf.node, maxdepth)
         print("\nPress any key to continue...")
         msvcrt.getch()
+
+    elif pilihan == 4:
+        menu.about()
 
     elif pilihan == 5:
         exit()
