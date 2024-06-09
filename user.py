@@ -67,7 +67,7 @@ class User:
 
         # 5
         while True:
-            X_test[4] = float(input("Range: \nBuruk 0.0 - 30.0 Bagus\n\n5. Kesehatan fisik: "))
+            X_test[4] = float(input("Range: 0 - 30 \n\n5. Berapa hari anda mengalami sakit fisik dalam 30 hari terakhir? "))
             try:
                 if 0.0 <= X_test[4] <= 30.0:
                     break
@@ -84,7 +84,7 @@ class User:
         # 6
         while True:
             try:
-                X_test[5] = float(input("Range: \nBuruk 0.0 - 30.0 Bagus\n\n6. Kesehatan mental: "))
+                X_test[5] = float(input("Range: 0 - 30 \n\n6. Berapa hari anda mengalami sakit mental dalam 30 hari terakhir? "))
                 if 0.0 <= X_test[5] <= 30.0:
                     break
                 else:
@@ -99,7 +99,7 @@ class User:
 
         # 7
         while True:
-            X_test[6] = input(f"Pilihan: {self.option(7).replace("[","").replace("]","")}\n7. Apakah anda memiliki perbedaan dalam gaya berjalan? ")
+            X_test[6] = input(f"Pilihan: {self.option(7).replace("[","").replace("]","")}\n7. Apakah anda memiliki kesulitan dalam berjalan atau menaiki tangga? ")
             if X_test[6] in self.option(7):
                 break
             else:
@@ -159,7 +159,7 @@ class User:
 
         # 12
         while True:
-            X_test[11] = input(f"Pilihan: {self.option(12).replace("[","").replace("]","")}\n12. Sering olahraga? ")
+            X_test[11] = input(f"Pilihan: {self.option(12).replace("[","").replace("]","")}\n12. Apakah melakukan olahraga dalam 30 hari terakhir? ")
             if X_test[11] in self.option(12):
                 break
             else:
@@ -208,7 +208,7 @@ class User:
 
         # 16
         while True:
-            X_test[15] = input(f"Pilihan: {self.option(16).replace("[","").replace("]","")}\n16. Apakah anda punya penyakit ginjal? ")
+            X_test[15] = input(f"Pilihan: {self.option(16).replace("[","").replace("]","")}\n16. Tidak termasuk batu ginjal, infeksi kandung kemih atau inkontinensia. Apakah anda punya penyakit ginjal? ")
             if X_test[15] in self.option(16):
                 break
             else:
