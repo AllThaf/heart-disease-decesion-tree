@@ -4,6 +4,7 @@ from menu import TampilTree as tampilkan
 from package.datasets import load_heart_disease
 from package.model_selection import train_test_split
 from package.tree import DecisionTreeClassifier
+from package.metrics import accuracy_score as asCreate
 from Fastpackage.tree import DecisionTreeClassifierFast
 from Fastpackage.metrics import accuracy_score
 
@@ -39,6 +40,9 @@ else:
     # Train the decision tree classifier
     clf.fit(X_train, y_train)
 
+    y_pred = clf.predict(X_test_copy)
+    asCreate(y_test, y_pred)
+
 while True:
     os.system("cls")
     menu.menu()
@@ -68,13 +72,14 @@ while True:
         accuracy = accuracy_score()
         print("Accuracy:", accuracy)
         print("\nPress any key to continue...")
+        print(clf.node.data)
         msvcrt.getch()
 
     elif pilihan == 3:
         os.system("cls")
         while True:
             try:
-                maxdepth = int(input("Masukkan kedalaman maksimal: "))
+                maxdepth = int(input("Masukkan kedalaman maksimal (max 10): "))
                 if maxdepth > 0 and maxdepth <= 10:
                     break
                 else:
@@ -86,7 +91,7 @@ while True:
                 os.system("cls")
         tampilkan().tampil(clf.node, maxdepth)
         tampilkan().traversal(clf.node, maxdepth)
-        print("\nPress any key to continue...")
+        print("\n\nPress any key to continue...")
         msvcrt.getch()
 
     elif pilihan == 4:
