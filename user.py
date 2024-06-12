@@ -18,8 +18,8 @@ class User:
                 "Program ini hanya dapat digunakan jika anda berusia 18 tahun atau lebih"
             )
             try:
-                X_test[0] = float(input("Range: 12.02 - 94.85\n\n1. BMI: "))
-                if 12.02 <= X_test[0] <= 94.85:
+                X_test[0] = input("Range: 12.02 - 94.85\n\n1. BMI: ")
+                if 12.02 <= float(X_test[0]) <= 94.85:
                     break
                 else:
                     print("\nMohon masukkan input yang benar")
@@ -56,7 +56,7 @@ class User:
 
         # 4
         while True:
-            X_test[3] = input(f"Pilihan: {self.option(4).replace("[","").replace("]","")}\n4. Apa anda punya stoke? ")
+            X_test[3] = input(f"Pilihan: {self.option(4).replace("[","").replace("]","")}\n4. Apa anda punya stroke? ")
             if X_test[3] in self.option(4):
                 break
             else:
@@ -67,9 +67,9 @@ class User:
 
         # 5
         while True:
-            X_test[4] = float(input("Range: 0 - 30 \n\n5. Berapa hari anda mengalami sakit fisik dalam 30 hari terakhir? "))
+            X_test[4] = input("Range: 0 - 30 \n\n5. Berapa hari anda mengalami sakit fisik dalam 30 hari terakhir? ")
             try:
-                if 0.0 <= X_test[4] <= 30.0:
+                if 0.0 <= float(X_test[4]) <= 30.0:
                     break
                 else:
                     print("\nMohon masukkan input yang benar")
@@ -84,8 +84,8 @@ class User:
         # 6
         while True:
             try:
-                X_test[5] = float(input("Range: 0 - 30 \n\n6. Berapa hari anda mengalami sakit mental dalam 30 hari terakhir? "))
-                if 0.0 <= X_test[5] <= 30.0:
+                X_test[5] = input("Range: 0 - 30 \n\n6. Berapa hari anda mengalami sakit mental dalam 30 hari terakhir? ")
+                if 0.0 <= float(X_test[5]) <= 30.0:
                     break
                 else:
                     print("\nMohon masukkan input yang benar")
@@ -122,8 +122,8 @@ class User:
         # 9
         while True:
             try:
-                X_test[8] = float(input("Range: 18 tahun ke atas\n\n9. Umur: "))
-                if 18.0 <= X_test[8]:
+                X_test[8] = input("Range: 18 tahun ke atas\n\n9. Umur: ")
+                if 18.0 <= float(X_test[8]):
                     break
                 else:
                     print("\nMohon masukkan input yang benar")
@@ -182,8 +182,8 @@ class User:
         # 14
         while True:
             try:
-                X_test[13] = float(input("Range:\n1.0 Jam - 24.0 Jam\n\n14. Rerata jam tidur: "))
-                if 1.0 <= X_test[13] <= 24.0:
+                X_test[13] = input("Range:\n1.0 Jam - 24.0 Jam\n\n14. Rerata jam tidur: ")
+                if 1.0 <= float(X_test[13]) <= 24.0:
                     break
                 else:
                     print("\nMohon masukkan input yang benar")
@@ -208,7 +208,7 @@ class User:
 
         # 16
         while True:
-            X_test[15] = input(f"Pilihan: {self.option(16).replace("[","").replace("]","")}\n16. Tidak termasuk batu ginjal, infeksi kandung kemih atau inkontinensia. Apakah anda punya penyakit ginjal? ")
+            X_test[15] = input(f"Pilihan: {self.option(16).replace("[","").replace("]","")}\n16. Selain batu ginjal, infeksi kandung kemih atau inkontinensia. Apakah anda punya penyakit ginjal? ")
             if X_test[15] in self.option(16):
                 break
             else:

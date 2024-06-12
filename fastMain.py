@@ -72,7 +72,6 @@ while True:
         accuracy = accuracy_score()
         print("Accuracy:", accuracy)
         print("\nPress any key to continue...")
-        print(clf.node.data)
         msvcrt.getch()
 
     elif pilihan == 3:

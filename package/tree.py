@@ -22,7 +22,7 @@ class DecisionTreeClassifier:
         self.max_depth = max_depth
         self.num = 0
         self.node = None
-        
+
         with open("data/node.txt", 'w') as file:
             file.write("")
             file.close
