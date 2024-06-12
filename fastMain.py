@@ -82,8 +82,9 @@ while True:
                 if maxdepth > 0 and maxdepth <= 10:
                     break
                 else:
-                    print("Kedalaman harus lebih dari 0 atau tidak lebih dari 10")
+                    print("Kedalaman harus lebih dari 0 dan kurang dari 10")
                     time.sleep(3)
+                    os.system("cls")
             except:
                 print("Masukkan angka yang benar")
                 time.sleep(3)

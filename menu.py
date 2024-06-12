@@ -1,3 +1,5 @@
+from package.linkedList import LL
+
 import msvcrt
 import os
 import time
@@ -119,10 +121,10 @@ class TampilTree:
     def levelOrder(self, node, max_depth):
         if node is None:
             return
-        queue = []
+        queue = LL()
         queue.append((node, 0))
-        while len(queue) > 0:
-            current_node, depth = queue.pop(0)
+        while queue.len() > 0:
+            current_node, depth = queue.pop().info
             if depth < max_depth + 1:
                 print(current_node.data.idx, end=" ")
             if depth < max_depth:
